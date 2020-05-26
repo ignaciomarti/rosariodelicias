@@ -1,115 +1,197 @@
-/* Tarjeta de Productos
--------------------------------------------------- */
-
-.product-card {
-    background: #ffffff;
-    box-shadow: 0px 6px 18px rgba(0, 0, 0, 0.1);
-    display: inline-block;
-    width: 100%;
-    border-radius: 30px;
-        -webkit-border-radius: 30px;
-        -moz-border-radius: 30px;
-        -ms-border-radius: 30px;
-        -o-border-radius: 30px;
-    transition: 300ms;
-        -webkit-transition: 300ms;
-        -moz-transition: 300ms;
-        -ms-transition: 300ms;
-        -o-transition: 300ms;
-        padding: 0;
+/********* GENERALES **********/
+*{
+  box-sizing: border-box;
 }
 
-  .product-card:hover {
-      transform: scale(0.9);
-      -webkit-transform: scale(0.9);
-      -moz-transform: scale(0.9);
-      -ms-transform: scale(0.9);
-      -o-transform: scale(0.9);
-      box-shadow: 0px 10px 25px rgba(0, 0, 0, 0.08);
-      border-radius: 30px;
-      -webkit-border-radius: 30px;
-      -moz-border-radius: 30px;
-      -ms-border-radius: 30px;
-      -o-border-radius: 30px;
+ul{
+  list-style-type: none;
 }
 
-  .product-header {
-    position: relative;
-    padding: 0;
-    margin: 0;
-    height: 230px;
-    width: 100%;
-    display: block;
-    border-top-left-radius: 10px;
-    border-top-right-radius: 10px;
-  }
-
-  .product-header img{
-      display: block;
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      overflow: hidden;
-      margin: 0 auto;
-      border-top-right-radius: 30px;
-      border-top-left-radius: 30px;
-  }
-
-  .product-content {
-    padding: 10px;
-    margin: 0;
-  }
-
-  .product-content-header, .product-info {
-    display: table;
-    width: 100%;
-  }
-
-  .product-title {
-    font-size: 24px;
-    margin: 0;
-    text-align: center;
-  }
-
-  .product-info {
-    margin-top: 1em;
-    display: flex;
-    justify-content: space-around;
-  }
-
-  .info-section {
-    display: table-cell;
-    text-transform: uppercase;
-  }
-
-
-  .info-section label {
-    display: block;
-
-    margin-bottom: .5em;
-    font-size: 9px;
-  }
-
-  .info-section span {
-    font-weight: 700;
-    font-size: 11px;
-  }
-
-
-.info-section form button{
-    padding: 0;
-    margin: 0;
-    border: none;
-    background: none;
-}
-.info-section form button i{
-
-    padding: 0;
-    margin: 0;
-    color: #38c172;
+a, a:hover{
+  text-decoration: none;
+  color: unset;
 }
 
+html{
+  font-size: 62.5%;
+}
 
-/* End of Tarjeta de Productos
--------------------------------------------------- */
+h1{
+  font-size: 4rem;
+  font-family: 'Montserrat', sans-serif;
+}
 
+h2{
+  font-size: 3.5rem;
+  font-family: 'Montserrat', sans-serif;
+}
+
+h3{
+  font-size: 3rem;
+  font-family: 'Montserrat', sans-serif;
+}
+
+h4{
+  font-size: 2rem;
+  font-family: 'Montserrat', sans-serif;
+}
+
+/********* HEADER **********/
+header{
+  padding: 1.5rem 0;
+}
+
+/* LOGO */
+header img {
+  max-width: 15%!important;
+}
+
+header a{
+  font-family: 'Montserrat', sans-serif;
+  text-transform: uppercase;
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #684f40;
+  transition: all 0.25s ease-in-out;
+}
+header a:hover{
+  color: rgb(255, 196, 0);
+}
+
+/********* MAIN SLIDER **********/
+#carousel-example-2 img{
+  max-height: 80vh;
+}
+
+#carousel-example-2 .view{
+  position: relative;
+}
+
+.contenedor-titulos{
+  position: absolute;
+  top: 40%;
+  left: 15%;
+}
+
+#carousel-example-2 .view h1{
+  background-color: #715f31;
+  opacity: 80%;
+  padding: 3rem 2rem;
+  color: white;
+  margin: 0;
+}
+#carousel-example-2 .view h3{
+  background-color: rgba(255, 196, 0, 0.7);
+  padding: 3rem 2rem;
+  margin: 0;
+}
+
+/********* DESTACADOS **********/
+.destacados h4, .diferencia h4{
+  text-transform: uppercase;
+  color: #684f40;
+  font-weight: 700;
+}
+
+.destacados>p, .diferencia>p{
+  font-size: 1.4rem;
+  color: #696969;
+  font-family: 'Open Sans', sans-serif;
+}
+
+.destacados .card{
+  border: 2px solid #696969;
+  position: relative;
+}
+.destacados .card img{
+  transition: all .5s ease-in-out;
+  padding: 8px;
+}
+.destacados .card:hover img{
+  opacity: 50%;
+}
+
+.destacados .card .contenedor-descripcion-destacados{
+  position: absolute;
+  bottom: 0;
+  margin: 0;
+  height: 50%;
+  background-color: rgba(255, 196, 0, 0.8);
+  font-size: 1.5rem;
+  font-family: 'Open Sans', sans-serif;
+  width: 100%;
+  color: white;
+  display: none;
+  transition: all 0.5s ease-in-out;
+}
+.destacados .card:hover .contenedor-descripcion-destacados{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+}
+.destacados .card .contenedor-descripcion-destacados p{
+  font-weight: bold;
+}
+.destacados hr, .diferencia hr{
+  display: block;
+  width: 20rem;
+  border-top: 2px solid;
+}
+.destacados button{
+  text-transform: uppercase;
+  color: #684f40;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 700;
+  background-color: transparent;
+  border: 2px solid #684f40;
+  padding: 1.5rem 3rem;
+  font-size: 1.5rem;
+  transition: all .5s ease-in-out;
+}
+.destacados button:hover{
+  background-color: #684f40;
+  color: white;
+}
+
+/********* TESTIMONIAL **********/
+.testimoniales{
+  background-image: url('../img/foto-welcome3.jpg');
+  background-position: center center;
+  background-attachment: fixed;
+  overflow: hidden;
+  position: relative;
+}
+.testimoniales::after{
+    content: '';
+    background-color: #d69c1f;
+    opacity: 80%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
+.testimoniales img{
+  -webkit-transform:rotate(-4deg);
+  -moz-transform: rotate(-4deg);
+  -ms-transform: rotate(-4deg);
+  -o-transform: rotate(-4deg);
+  transform: rotate(-4deg);
+  height: 50vh;
+  border: 10px solid white;
+  margin-left: 5rem;
+  z-index: 1;
+}
+.testimoniales blockquote{
+  font-size: 3rem;
+  font-weight: 300;
+  z-index: 1;
+  text-align: right;
+  margin-left: 5rem;
+}
+
+/********* FOOTER **********/
+footer{
+  font-size: 1.5rem;
+}
